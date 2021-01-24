@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="drowRect" width="500" height="400" style="border:1px solid #d3d3d3;"></canvas>
+</body>
+</html>
+<script>
+    function Rectangle(x, y,) {
+        this.x = x;
+        this.y = y;
+        this.area = function () {
+            return this.x * this.y
+        }
+        this.perimeter = function () {
+            return (this.y + this.x) * 2
+        }
+        this.draw = function () {
+            let ctx = document.getElementById("drowRect").getContext("2d")
+            ctx.beginPath();
+            ctx.strokeRect(100, 100, this.x, this.y)
+        }
+    }
+    let rec = new Rectangle(200, 150);
+    document.write(rec.area() +"<br>");
+    document.write(rec.perimeter());
+    rec.draw()
+</script>

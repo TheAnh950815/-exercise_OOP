@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Temperature(c) {
+        this.c=c
+        this.f=function () {
+           return  9/5*this.c +32
+        }
+        this.k= function () {
+            return this.c - 273}
+    }
+    let temperature = new Temperature(25)
+    document.write(temperature.c +"</br>")
+document.write(temperature.f()+"</br>")
+document.write(temperature.k() + "</br>")
+</script>
